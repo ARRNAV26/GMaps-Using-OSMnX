@@ -1,0 +1,127 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f7fc;
+  overflow: hidden; /* Prevent scrolling of body content */
+}
+
+.coordinate-container-horizontal {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+  padding-top: 5px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 70%;
+  animation: fadeIn 1s ease-in-out;
+  position: fixed;
+  top: 20px;  /* Fixed position at the top */
+  left: 56%;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 999; /* Ensure it's on top of the map */
+  padding-top: 10px; /* Adjust for better spacing */
+}
+
+.coordinate-group-left, .coordinate-group-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 45%;
+}
+
+.coordinate-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+input:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+input:enabled:hover {
+  border-color: #007BFF;
+}
+
+input:enabled:focus {
+  border-color: #007BFF;
+  background-color: #f1f9ff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #004085;
+  transform: translateY(1px);
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light gray background */
+  border-top: 8px solid #007bff; /* Blue spinner color */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
