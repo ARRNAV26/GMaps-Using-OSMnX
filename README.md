@@ -1,5 +1,7 @@
 ![alt text](https://github.com/ARRNAV26/GMaps-Using-OSMnX/blob/main/Screenshot.png?raw=true)
 
+NOTE: I am facing errors in deployment, but don't worry, this website will be hosted in a day or two!
+
 This project is a web application that allows users to input the latitude and longitude of a source (src) and destination (dst) location and get the shortest route between these points on a map. 
 The route is visualized using a polyline on a Google Map, and the backend utilizes the OSMnx library in Python to calculate the shortest path based on real-world road networks. The frontend is built with React, while the backend calculations are powered by Python and OSMnx.
 
